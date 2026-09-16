@@ -93,6 +93,8 @@
   .btn-primary:hover{ background:var(--red-dark); }
   .btn-outline{ background:transparent; border:2px solid var(--gold); color:var(--paper); padding:11px 20px; }
   .btn-outline:hover{ background:rgba(214,162,74,.15); }
+  .btn-telegram{ background:#229ED9; color:#fff; text-decoration:none; }
+  .btn-telegram:hover{ background:#1B87BD; }
   .btn:active{ transform:scale(.98); }
   .btn:disabled{ opacity:.6; cursor:default; }
 
@@ -235,6 +237,7 @@
     <div class="actions-row">
       <button class="btn btn-primary" id="locate-btn">📍 Buscar fondas cerca de mí</button>
       <button class="btn btn-outline" id="show-all-btn">📋 Ver todas las fondas</button>
+      <a href="https://t.me/CercaDeMiBot" target="_blank" rel="noopener" class="btn btn-telegram">💬 Ábrelo en Telegram</a>
     </div>
 
     <div class="radius-control" id="radius-control" style="display:none;">
@@ -280,7 +283,6 @@
   const radiusSlider = document.getElementById('radius-slider');
   const radiusValue = document.getElementById('radius-value');
 
-  // --- Pin personalizado (bandera/pennant en colores patrios) ---
   function fondaIcon(){
     return L.divIcon({
       className: 'fonda-pin',
